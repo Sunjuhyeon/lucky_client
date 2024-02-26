@@ -1,0 +1,83 @@
+body,
+body * {
+  font-family: "Noto Sans Kr", sans-serif;
+}
+
+body {
+  color: #222;
+}
+
+button {
+  cursor: pointer;
+}
+
+.w_set {
+  width: 1080px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.nunito {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.btn {
+  font-size: 17px;
+  line-height: 22px;
+  padding: 0.7rem 0.75rem;
+  border-radius: 3px;
+}
+.btn.color_1 {
+  color: #fff;
+  background-color: #39A7FF;
+}
+
+.tit_wrap {
+  text-align: center;
+}
+.tit_wrap > span {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #39A7FF;
+}
+.tit_wrap p {
+  font-size: 29px;
+  line-height: 42px;
+  font-weight: 500;
+}
+.tit_wrap p em {
+  color: #39A7FF;
+}
+.tit_wrap p span {
+  display: inline;
+}
+.tit_wrap p span + span {
+  margin-left: 4px;
+}
+
+@media (max-width: 1080px) {
+  body:not(.is_pc) .w_set {
+    width: auto;
+    max-width: 1080px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  body:not(.is_pc) .hide_m {
+    display: none !important;
+  }
+  body:not(.is_pc) .tit_wrap > span {
+    font-size: 15px;
+  }
+  body:not(.is_pc) .tit_wrap p {
+    font-size: 24px;
+    line-height: 36px;
+    word-break: keep-all;
+  }
+  body:not(.is_pc) .tit_wrap p span {
+    display: block;
+  }
+  body:not(.is_pc) .tit_wrap p span + span {
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=common.css.map */

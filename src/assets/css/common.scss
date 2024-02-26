@@ -1,0 +1,88 @@
+@import 'utility.scss';
+
+body,
+body * {
+  font-family: "Noto Sans Kr", sans-serif;
+}
+
+body{
+  color: $font0;
+}
+button{
+  cursor: pointer;
+}
+
+.w_set{
+  width: $w_set;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.nunito{
+  font-family: $nunito;
+}
+
+.btn{
+  font-size: 17px;
+  line-height: 22px;
+  padding: 0.7rem 0.75rem;
+  border-radius: 3px;
+  &.color_1 {
+      color: #fff;
+      background-color: $point0;
+    }
+}
+
+.tit_wrap{
+  text-align: center;
+  >span{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+    color: $point0;
+  }
+  p{
+    font-size: 29px;
+    line-height: 42px;
+    font-weight: 500;
+    em{
+      color: $point0;
+    }
+    span{
+      display: inline;
+      +span {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@include mobile{
+  .w_set{
+    width: auto;
+    max-width: $w_set;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hide_m{
+    display: none !important;
+  }
+
+  .tit_wrap{
+    >span{
+      font-size: 15px;
+    }
+    p{
+      font-size: 24px;
+      line-height: 36px;
+      word-break: keep-all;
+      span{
+        display: block;
+        +span{
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

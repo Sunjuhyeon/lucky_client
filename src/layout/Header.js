@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({Props}) {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   // 스크롤 감지
@@ -13,13 +13,13 @@ export default function Header() {
   });
 
   return (
-    <header id='header' className={`${scrollPosition < 10 ? '' : 'scroll'}`}>
+    <header id='header' className={`${scrollPosition < 10 ? '' : 'scroll'} ${Props}`}>
       <div className='w_set'>
         <div className='hd_wrap'>
           <h1 className='logo'>
-            <a href="#">
+            <Link to="/">
               <img src={require('../assets/images/img/logo.png')} alt="럭키시스템(주) 로고"/>
-            </a>
+            </Link>
           </h1>
           <nav>
             <button type='button' className='mo_nav'>모바일 버전 메뉴바</button>
@@ -65,7 +65,7 @@ export default function Header() {
                 </ul>
               </li>
               <li>
-                <a href="#">견적 문의</a>
+                <Link to="/send">견적 문의</Link>
               </li>
               <li>
                 <a href="#">고객센터</a>
@@ -76,7 +76,7 @@ export default function Header() {
                 </ul>
               </li>
             </ul>
-            <a href="#" className='btn color_1'>빠른 전화상담</a>
+            <a href="tel:024612203" className='btn color_1'>빠른 전화상담</a>
           </nav>
         </div>
       </div>

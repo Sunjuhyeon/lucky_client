@@ -27,10 +27,16 @@ button{
   line-height: 22px;
   padding: 0.7rem 0.75rem;
   border-radius: 3px;
-  &.color_1 {
-      color: #fff;
-      background-color: $point0;
-    }
+  &.color_1{
+    color: #fff;
+    background-color: $point0;
+  }
+  &.color_2{
+    border: 1px solid #e9e9e9;
+    font-size: 14px;
+    color: #d84949;
+    padding: 3px 10px;
+  }
 }
 
 .tit_wrap{
@@ -52,6 +58,156 @@ button{
       display: inline;
       +span {
         margin-left: 4px;
+      }
+    }
+  }
+}
+
+.essen{
+  position: relative;
+  &:before{
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: -7px;
+    color: $point0;
+  }
+  &.type_l{
+    &:before{
+      right: auto;
+      left: -7px;
+    }
+  }
+}
+
+input[type=number]{
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+input[type=text], input[type=number]{
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  padding: 0 10px;
+  &::placeholder{
+    font-size: 15px;
+    color: #989898;
+  }
+  &:focus{
+    outline: none;
+    border-color: $point0;
+    background-color: #e0f4ff84;
+  }
+}
+textarea{
+  width: 100%;
+  height: 300px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  padding: 10px;
+  &:focus {
+    outline: none;
+    border-color: $point0;
+  }
+  &::-webkit-scrollbar {
+      width: 8px;
+      /* 가로축 스크롤바 폭 너비 */
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #ddd;
+      /* 스크롤바의 색상 */
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #f4f4f4;
+      /*스크롤바 뒷 배경 색상*/
+      border-radius: 10px;
+      cursor: pointer;
+    }
+}
+.checkbox{
+  >input[type=checkbox]{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+  >label{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 31px;
+    font-size: 15px;
+    color: #222;
+    line-height: 22px;
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -13px;
+      width: 24px;
+      height: 24px;
+      background: #e9e9e9 url("../images/ico/checkbox_on.svg") no-repeat center center;
+      border: 1px solid #e9e9e9;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+  }
+  input:checked ~ label:before {
+		border: 0 none;
+		background: $point0 url("../images/ico/checkbox_on.svg");
+		background-size: 100% 100%;
+	}
+	input[disabled] ~ label:before {
+		background-color: #d3d3d3;
+	}
+}
+.attach{
+  >input[type=file]{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+  >label{
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    padding: 15px 40px;
+    &:hover{
+      border-color: $point0;
+    }
+    span{
+      font-size: 18px;
+      color: $point0;
+      position: relative;
+      padding-left: 15px;
+      &:before{
+        content: "";
+        background: url(../images/ico/plus_ico.svg) no-repeat center;
+        background-size: contain;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }

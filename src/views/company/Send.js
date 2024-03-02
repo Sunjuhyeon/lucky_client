@@ -1,6 +1,57 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react';
 
 export default function Send() {
+  const [Name, setName] = useState('');
+  const [Number, setNumber] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Subject, setSubject] = useState('');
+  const [Message, setMessage] = useState('');
+  const [File, setFile] = useState('');
+
+  const nameHandler = e => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
+  const numberHandler = e => {
+    e.preventDefault();
+    setNumber(e.target.value);
+  };
+  const emailHandler = e => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
+  const subjectHandler = e => {
+    e.preventDefault();
+    setSubject(e.target.value);
+  };
+  const messageHandler = e => {
+    e.preventDefault();
+    setMessage(e.target.value);
+  };
+  const fileHandler = e => {
+    e.preventDefault();
+    setFile(e.target.value);
+  };
+
+  const submitHandler = async e => {
+    e.preventDefault();
+
+    axios
+      .post('/mail', {
+        data: {
+          yourname: Name,
+          yournumber: Number,
+          youremail: Email,
+          yoursubject: Subject,
+          yourmessage: Message,
+          yourfile: File,
+        },
+      })
+      .then(response => {
+        console.log(response.data);
+      });
+  };
   return (
     <div className="w_set">
       <div className="inner">
@@ -16,7 +67,7 @@ export default function Send() {
             <p className="essen_info">
               <span className="essen type_l">필수 입력</span>
             </p>
-            <form action="">
+            <form onSubmit={submitHandler}>
               <ul className="form_list">
                 <li>
                   <p>담당자명</p>
@@ -25,6 +76,8 @@ export default function Send() {
                       type="text"
                       id="send_name"
                       placeholder="담당자명 입력"
+                      required
+                      onChange={nameHandler}
                     />
                     <label htmlFor="send_name">담당자명</label>
                   </div>
@@ -36,6 +89,8 @@ export default function Send() {
                       type="number"
                       id="send_num"
                       placeholder="'-'제외 숫자만 입력"
+                      required
+                      onChange={numberHandler}
                     />
                     <label htmlFor="send_num">연락처</label>
                   </div>
@@ -47,6 +102,8 @@ export default function Send() {
                       type="text"
                       id="send_email"
                       placeholder="이메일주소 입력"
+                      required
+                      onChange={emailHandler}
                     />
                     <label htmlFor="send_email">이메일</label>
                   </div>
@@ -76,13 +133,17 @@ export default function Send() {
                         <label htmlFor="ck5">주차관리</label>
                       </li>
                     </ul>
-                    <span>중복선택 가능</span>
+                    <span className="sub_txt">※중복선택 가능</span>
                   </div>
                 </li>
                 <li>
                   <p>문의내용</p>
                   <div className="input_wrap">
-                    <textarea id="send_txt"></textarea>
+                    <textarea 
+                    id="send_txt" 
+                    required 
+                    onChange={messageHandler}
+                    ></textarea>
                     <label htmlFor="send_txt">문의내용</label>
                   </div>
                 </li>
@@ -93,7 +154,11 @@ export default function Send() {
                       <label htmlFor="send_file">
                         <span>파일추가</span>
                       </label>
-                      <input type="file" id="send_file" />
+                      <input 
+                      type="file" 
+                      id="send_file" 
+                      onChange={fileHandler} 
+                      />
                     </div>
                     <ul className="file_list">
                       <li>
@@ -108,7 +173,9 @@ export default function Send() {
                   </div>
                 </li>
               </ul>
-              <button type="submit" className='btn color_1'>견적 문의 제출하기</button>
+              <button type="submit" className="btn color_1">
+                견적 문의 제출하기
+              </button>
             </form>
           </div>
         </div>

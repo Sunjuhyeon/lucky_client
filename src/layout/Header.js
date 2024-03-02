@@ -13,34 +13,39 @@ export default function Header({Props}) {
   });
 
   return (
-    <header id='header' className={`${scrollPosition < 10 ? '' : 'scroll'} ${Props}`}>
-      <div className='w_set'>
-        <div className='hd_wrap'>
-          <h1 className='logo'>
+    <header
+      id="header"
+      className={`${scrollPosition < 10 ? '' : 'scroll'} ${Props}`}
+    >
+      <div className="w_set">
+        <div className="hd_wrap">
+          <h1 className="logo">
             <Link to="/">
-              <img src={require('../assets/images/img/logo.png')} alt="럭키시스템(주) 로고"/>
+              <img
+                src={require('../assets/images/img/logo.png')}
+                alt="럭키시스템(주) 로고"
+              />
             </Link>
           </h1>
           <nav>
-            <button type='button' className='mo_nav'>모바일 버전 메뉴바</button>
-            <ul className='nav_wrap'>
+            <button type="button" className="mo_nav">
+              모바일 버전 메뉴바
+            </button>
+            <ul className="nav_wrap">
               <li>
-                <Link to="/intro">회사 소개</Link>
+                <Link to="/intro1">회사 소개</Link>
                 <ul>
                   <li>
-                    <Link to="/intro">인사말</Link>
+                    <Link to="/intro1">개요 · 연혁</Link>
                   </li>
                   <li>
-                    <a href="#">연혁</a>
+                    <Link to="/intro2">찾아오시는 길</Link>
                   </li>
                   <li>
-                    <a href="#">찾아오시는 길</a>
+                    <Link to="/intro3">조직도</Link>
                   </li>
                   <li>
-                    <a href="#">조직도</a>
-                  </li>
-                  <li>
-                    <a href="#">사업허가증</a>
+                    <Link to="/intro4">사업허가증</Link>
                   </li>
                 </ul>
               </li>
@@ -76,10 +81,12 @@ export default function Header({Props}) {
                 </ul>
               </li>
             </ul>
-            <a href="tel:024612203" className='btn color_1'>빠른 전화상담</a>
+            <a href="tel:024612203" className="btn color_1">
+              빠른 전화상담
+            </a>
           </nav>
         </div>
       </div>
     </header>
-  )
+  );
 }

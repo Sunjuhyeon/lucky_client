@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import IntroTab from './IntroTab';
 
 export class Intro1 extends Component {
   render() {
     return (
       <div className='inner'>
+        <IntroTab/>
         <div className='tit_wrap'>
           <p>
             <span>럭키시스템은 고객만족 경영을 위해 노력하는</span>

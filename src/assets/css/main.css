@@ -788,6 +788,11 @@
 .send_wrap .form_wrap .input_wrap {
   margin-top: 10px;
 }
+.send_wrap .form_wrap .input_wrap .sub_txt {
+  font-size: 14px;
+  color: #9a9a9a;
+  margin-left: 30px;
+}
 .send_wrap .form_wrap .file_list {
   margin-top: 10px;
   display: flex;

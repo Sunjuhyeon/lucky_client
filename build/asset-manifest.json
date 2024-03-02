@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.2a74e5e4.css",
-    "main.js": "./static/js/main.83954bda.js",
+    "main.css": "./static/css/main.dce45a8a.css",
+    "main.js": "./static/js/main.69aefbe5.js",
     "static/media/main_banner.jpg": "./static/media/main_banner.24fa3bdc3a34533bd74f.jpg",
     "static/media/dummy.png": "./static/media/dummy.4e7c240fbc7a9274c78e.png",
     "static/media/5.svg": "./static/media/5.ba440416babe8c2487e9.svg",
@@ -16,18 +16,22 @@
     "static/media/blog.png": "./static/media/blog.7c4d1ab2195f65089a0a.png",
     "static/media/partner1.svg": "./static/media/partner1.ddc95443e9be187f7d35.svg",
     "static/media/partner2.svg": "./static/media/partner2.14f7239f27b83d732db6.svg",
+    "static/media/call.svg": "./static/media/call.a6196c75e0f370715670.svg",
     "static/media/partner5.svg": "./static/media/partner5.8e1eefdfd0c818dd9743.svg",
     "static/media/sub2.svg": "./static/media/sub2.b873105aff443f6bae11.svg",
     "static/media/sub1.svg": "./static/media/sub1.07a63ad5acd1fe942d3a.svg",
     "index.html": "./index.html",
+    "static/media/checkbox_on.svg": "./static/media/checkbox_on.784b1c850c34317823df.svg",
+    "static/media/file_ico.svg": "./static/media/file_ico.1ba1d07f6bc8b137f9ae.svg",
     "static/media/moblie_menu_ico.svg": "./static/media/moblie_menu_ico.c9817e0aa3b6a250fcd9.svg",
+    "static/media/plus_ico.svg": "./static/media/plus_ico.5c4e4afd45af303e272d.svg",
     "static/media/arrow_up.svg": "./static/media/arrow_up.e2f2f853293381bccfe7.svg",
     "static/media/arrow_down.svg": "./static/media/arrow_down.7f1bfe217b759c9692c0.svg",
-    "main.2a74e5e4.css.map": "./static/css/main.2a74e5e4.css.map",
-    "main.83954bda.js.map": "./static/js/main.83954bda.js.map"
+    "main.dce45a8a.css.map": "./static/css/main.dce45a8a.css.map",
+    "main.69aefbe5.js.map": "./static/js/main.69aefbe5.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a74e5e4.css",
-    "static/js/main.83954bda.js"
+    "static/css/main.dce45a8a.css",
+    "static/js/main.69aefbe5.js"
   ]
 }

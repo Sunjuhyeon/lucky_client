@@ -1,57 +1,64 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 export default function Send() {
-  const [Name, setName] = useState('');
-  const [Number, setNumber] = useState('');
-  const [Email, setEmail] = useState('');
-  const [Subject, setSubject] = useState('');
-  const [Message, setMessage] = useState('');
-  const [File, setFile] = useState('');
+  const [email, setEmail] = useState('');
+  const [title, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
-  const nameHandler = e => {
-    e.preventDefault();
-    setName(e.target.value);
-  };
-  const numberHandler = e => {
-    e.preventDefault();
-    setNumber(e.target.value);
-  };
-  const emailHandler = e => {
+  const emailHandler = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
   };
-  const subjectHandler = e => {
+  const subjectHandler = (e) => {
     e.preventDefault();
     setSubject(e.target.value);
   };
-  const messageHandler = e => {
+  const messageHandler = (e) => {
     e.preventDefault();
     setMessage(e.target.value);
   };
-  const fileHandler = e => {
-    e.preventDefault();
-    setFile(e.target.value);
-  };
 
-  const submitHandler = async e => {
-    e.preventDefault();
-
-    axios
-      .post('/mail', {
-        data: {
-          yourname: Name,
-          yournumber: Number,
-          youremail: Email,
-          yoursubject: Subject,
-          yourmessage: Message,
-          yourfile: File,
-        },
-      })
-      .then(response => {
-        console.log(response.data);
-      });
-  };
+  const submitHandler = useCallback(
+    (e) => {
+      e.preventDefault();
+      if(email && title && message){
+        console.log(email, title, message);
+        const payload = {email: email, title:title, message:message};
+        axios
+          .post('http://localhost:8001/server/mail', payload)
+          .then((res) => console.log(res))
+          .catch((err) => console.error(err));
+      }
+    },
+    [email, title, message]
+  );
+  // const submitHandler = async (e) => {
+  //   e.preventDefault();
+  //   const data = {
+  //       yourname: Name,
+  //       yournumber: Number,
+  //       youremail: Email,
+  //       yoursubject: Subject,
+  //       yourmessage: Message,
+  //       yourfile: File,
+  //     }
+  //     console.log('test', JSON.stringify(data));
+  //   axios
+  //     .post('/mail', {
+  //       data: {
+  //         yourname: Name,
+  //         yournumber: Number,
+  //         youremail: Email,
+  //         yoursubject: Subject,
+  //         yourmessage: Message,
+  //         yourfile: File,
+  //       },
+  //     })
+  //     .then(response => {
+  //       console.log(response.data);
+  //     });
+  // };
   return (
     <div className="w_set">
       <div className="inner">
@@ -77,12 +84,12 @@ export default function Send() {
                       id="send_name"
                       placeholder="담당자명 입력"
                       required
-                      onChange={nameHandler}
+                      onChange={subjectHandler}
                     />
                     <label htmlFor="send_name">담당자명</label>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <p>연락처</p>
                   <div className="input_wrap">
                     <input
@@ -94,7 +101,7 @@ export default function Send() {
                     />
                     <label htmlFor="send_num">연락처</label>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <p>이메일</p>
                   <div className="input_wrap">
@@ -108,12 +115,12 @@ export default function Send() {
                     <label htmlFor="send_email">이메일</label>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <p>필요 서비스</p>
                   <div className="input_wrap">
                     <ul className="ck_wrap">
                       <li className="checkbox">
-                        <input type="checkbox" id="ck1" name="ck_list" />
+                        <input type="checkbox" id="ck1" name="ck_list" onChange={subjectHandler}/>
                         <label htmlFor="ck1">빌딩경비</label>
                       </li>
                       <li className="checkbox">
@@ -135,29 +142,29 @@ export default function Send() {
                     </ul>
                     <span className="sub_txt">※중복선택 가능</span>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <p>문의내용</p>
                   <div className="input_wrap">
-                    <textarea 
-                    id="send_txt" 
-                    required 
-                    onChange={messageHandler}
+                    <textarea
+                      id="send_txt"
+                      required
+                      onChange={messageHandler}
                     ></textarea>
                     <label htmlFor="send_txt">문의내용</label>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <p>첨부파일</p>
                   <div className="input_wrap">
                     <div className="attach">
                       <label htmlFor="send_file">
                         <span>파일추가</span>
                       </label>
-                      <input 
-                      type="file" 
-                      id="send_file" 
-                      onChange={fileHandler} 
+                      <input
+                        type="file"
+                        id="send_file"
+                        onChange={fileHandler}
                       />
                     </div>
                     <ul className="file_list">
@@ -171,7 +178,7 @@ export default function Send() {
                       </li>
                     </ul>
                   </div>
-                </li>
+                </li> */}
               </ul>
               <button type="submit" className="btn color_1">
                 견적 문의 제출하기

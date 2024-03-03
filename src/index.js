@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         element: <Sub /> 
       },
       { path: '/send', 
-      element: <Send /> 
+        element: <Send /> 
       },
     ],
   },

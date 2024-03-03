@@ -4,10 +4,6 @@ import { useEffect, useState } from 'react';
 import ScrollTop from './layout/ScrollTop';
 import Header from './layout/Header';
 import Side from './layout/Sidebar';
-import Main from './views/Main';
-import Intro from './views/company/IntroTab';
-import Sub from './views/company/Sub';
-import Send from './views/company/Send';
 
 function App() {
   const location = useLocation();

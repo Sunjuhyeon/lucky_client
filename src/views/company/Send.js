@@ -26,9 +26,9 @@ export default function Send() {
         console.log(email, title, message);
         const payload = {email: email, title:title, message:message};
         axios
-          .post('http://localhost:8001/server/mail', payload)
-          .then((res) => console.log(res))
-          .catch((err) => console.error(err));
+          .post('http://lucky.cafe24app.com/server/mail', payload)
+          .then(res => console.log(res))
+          .catch(err => console.error(err));
       }
     },
     [email, title, message]

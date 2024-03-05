@@ -50,35 +50,27 @@ export default function Header({Props}) {
                 </ul>
               </li>
               <li>
-                <Link to="/sub">서비스 소개</Link>
+                <Link to="/service1">서비스 소개</Link>
                 <ul>
                   <li>
-                    <a href="#">빌딩경비</a>
+                    <Link to="/service1">빌딩경비</Link>
                   </li>
                   <li>
-                    <a href="#">빌딩청소</a>
+                    <Link to="/service2">빌딩청소</Link>
                   </li>
                   <li>
-                    <a href="#">공사현장경비</a>
+                    <Link to="/service3">공사현장경비</Link>
                   </li>
                   <li>
-                    <a href="#">시설관리</a>
+                    <Link to="/service4">시설관리</Link>
                   </li>
                   <li>
-                    <a href="#">주차관리</a>
+                    <Link to="/service5">주차관리</Link>
                   </li>
                 </ul>
               </li>
               <li>
                 <Link to="/send">견적 문의</Link>
-              </li>
-              <li>
-                <a href="#">고객센터</a>
-                <ul>
-                  <li>
-                    <a href="#">1대1 상담</a>
-                  </li>
-                </ul>
               </li>
             </ul>
             <a href="tel:024612203" className="btn color_1">

@@ -3,6 +3,7 @@ import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ScrollTop from './layout/ScrollTop';
 import Header from './layout/Header';
+import Footer from './layout/Footer'
 import Side from './layout/Sidebar';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Header Props={headerClass} />
       <Side />
       <Outlet />
+      <Footer/>
     </>
   );
 }

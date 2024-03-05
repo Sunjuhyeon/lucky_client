@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components"
-import Footer from '../layout/Footer';
 import Partner from './sub/Partner';
 import Service from './sub/Service';
 
@@ -201,7 +200,6 @@ export default function Main() {
       </ul>
     </section>
     </MainSection>
-    <Footer/>
     </>
   )
 }

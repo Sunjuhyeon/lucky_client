@@ -89,7 +89,7 @@
 }
 
 .ft_wrap {
-  background-color: #F1F4F6;
+  background-color: rgba(241, 244, 246, 0.2117647059);
   padding: 40px 80px 60px;
 }
 .ft_wrap .f_gnb {
@@ -871,6 +871,83 @@
 }
 .inner .tit_wrap p span {
   display: block;
+}
+
+.service_wrap {
+  padding: 180px 0 0;
+}
+.service_wrap .tit_wrap h3 {
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 500;
+}
+.service_wrap .tit_wrap p {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.service_wrap .content_wrap {
+  background-color: rgba(224, 244, 255, 0.5);
+  padding: 80px 0 120px;
+}
+.service_wrap .content_wrap .w_set {
+  display: flex;
+  gap: 40px;
+}
+.service_wrap .content_wrap .w_set .img_wrap {
+  width: 450px;
+  height: 350px;
+  border-radius: 6px;
+  background: no-repeat center;
+  background-size: cover;
+  flex: 0 0 auto;
+}
+.service_wrap .content_wrap .w_set .img_wrap.service1 {
+  background-image: url("../images/img/service1.jpg");
+}
+.service_wrap .content_wrap .w_set .img_wrap.service2 {
+  background-image: url("../images/img/service2.jpg");
+}
+.service_wrap .content_wrap .w_set .img_wrap.service3 {
+  background-image: url("../images/img/service3.jpg");
+}
+.service_wrap .content_wrap .w_set .img_wrap.service4 {
+  background-image: url("../images/img/service4.jpg");
+}
+.service_wrap .content_wrap .w_set .img_wrap.service5 {
+  background-image: url("../images/img/service5.jpg");
+}
+.service_wrap .content_wrap .w_set .txt_wrap .svc_tit {
+  font-size: 30px;
+  font-weight: 500;
+  word-break: keep-all;
+}
+.service_wrap .content_wrap .w_set .txt_wrap .svc_list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service_wrap .content_wrap .w_set .txt_wrap .svc_list li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 22px;
+  line-height: 32px;
+  color: #6C6B6B;
+  margin-left: 10px;
+  word-break: keep-all;
+}
+.service_wrap .content_wrap .w_set .txt_wrap .svc_list li:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #6C6B6B;
 }
 
 @media (max-width: 1080px) {

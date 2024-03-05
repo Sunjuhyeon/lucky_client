@@ -2,9 +2,13 @@ import axios from 'axios';
 import React, { useCallback, useState } from 'react';
 
 export default function Send() {
+  const checkboxList = ['빌딩경비', '빌딩청소', '공사현장경비', '시설관리', '주차관리'];
+
   const [email, setEmail] = useState('');
   const [title, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [number, setNumber] = useState('');
+  const [checkedList, setCheckedList] = useState([]);
 
   const emailHandler = (e) => {
     e.preventDefault();
@@ -18,47 +22,43 @@ export default function Send() {
     e.preventDefault();
     setMessage(e.target.value);
   };
+  const numberHandler = (e) => {
+    e.preventDefault();
+    setNumber(e.target.value);
+  };
+  const onCheckedItem = useCallback(
+    (checked, id) => {
+      const value = checkboxList[parseInt(id.substring(2)) - 1];
+      if (checked) {
+        setCheckedList(prev => [...prev, value]);
+      } else {
+        setCheckedList(checkedList.filter(el => el !== value));
+      }
+    },
+    [checkedList]
+  );
 
   const submitHandler = useCallback(
     (e) => {
       e.preventDefault();
-      if(email && title && message){
-        console.log(email, title, message);
-        const payload = {email: email, title:title, message:message};
+      if (number && email && title && message && checkedList) {
+        console.log(number, email, title, message, checkedList);
+        const payload = {
+          number: number,
+          email: email,
+          title: title,
+          message: message,
+          checkedList: checkedList
+        };
         axios
-          .post('http://lucky.cafe24app.com/server/mail', payload)
+          .post('http://localhost:8001/server/mail', payload)
           .then(res => console.log(res))
           .catch(err => console.error(err));
       }
     },
-    [email, title, message]
+    [number, email, title, message]
   );
-  // const submitHandler = async (e) => {
-  //   e.preventDefault();
-  //   const data = {
-  //       yourname: Name,
-  //       yournumber: Number,
-  //       youremail: Email,
-  //       yoursubject: Subject,
-  //       yourmessage: Message,
-  //       yourfile: File,
-  //     }
-  //     console.log('test', JSON.stringify(data));
-  //   axios
-  //     .post('/mail', {
-  //       data: {
-  //         yourname: Name,
-  //         yournumber: Number,
-  //         youremail: Email,
-  //         yoursubject: Subject,
-  //         yourmessage: Message,
-  //         yourfile: File,
-  //       },
-  //     })
-  //     .then(response => {
-  //       console.log(response.data);
-  //     });
-  // };
+  
   return (
     <div className="w_set">
       <div className="inner">
@@ -89,7 +89,7 @@ export default function Send() {
                     <label htmlFor="send_name">담당자명</label>
                   </div>
                 </li>
-                {/* <li>
+                <li>
                   <p>연락처</p>
                   <div className="input_wrap">
                     <input
@@ -101,7 +101,7 @@ export default function Send() {
                     />
                     <label htmlFor="send_num">연락처</label>
                   </div>
-                </li> */}
+                </li>
                 <li>
                   <p>이메일</p>
                   <div className="input_wrap">
@@ -115,34 +115,32 @@ export default function Send() {
                     <label htmlFor="send_email">이메일</label>
                   </div>
                 </li>
-                {/* <li>
+                <li>
                   <p>필요 서비스</p>
                   <div className="input_wrap">
                     <ul className="ck_wrap">
-                      <li className="checkbox">
-                        <input type="checkbox" id="ck1" name="ck_list" onChange={subjectHandler}/>
-                        <label htmlFor="ck1">빌딩경비</label>
-                      </li>
-                      <li className="checkbox">
-                        <input type="checkbox" id="ck2" name="ck_list" />
-                        <label htmlFor="ck2">빌딩청소</label>
-                      </li>
-                      <li className="checkbox">
-                        <input type="checkbox" id="ck3" name="ck_list" />
-                        <label htmlFor="ck3">공사현장경비</label>
-                      </li>
-                      <li className="checkbox">
-                        <input type="checkbox" id="ck4" name="ck_list" />
-                        <label htmlFor="ck4">시설관리</label>
-                      </li>
-                      <li className="checkbox">
-                        <input type="checkbox" id="ck5" name="ck_list" />
-                        <label htmlFor="ck5">주차관리</label>
-                      </li>
+                      {
+                        checkboxList.map((item, idx) => {
+                          return (
+                            <li className="checkbox">
+                              <input
+                                type="checkbox"
+                                id={`ck${idx + 1}`}
+                                name="ck_list"
+                                value={item}
+                                onChange={e => {
+                                  onCheckedItem(e.target.checked, e.target.id);
+                                }}
+                              />
+                              <label htmlFor={`ck${idx + 1}`}>{item}</label>
+                            </li>
+                          );
+                        })
+                      }
                     </ul>
                     <span className="sub_txt">※중복선택 가능</span>
                   </div>
-                </li> */}
+                </li>
                 <li>
                   <p>문의내용</p>
                   <div className="input_wrap">

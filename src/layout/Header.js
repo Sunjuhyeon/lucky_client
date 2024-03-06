@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 
-export default function Header({Props}) {
+export default function Header({ Props, setSelectedTab }) {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   // 스크롤 감지
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  }
+  };
   useEffect(() => {
     window.addEventListener('scroll', updateScroll);
   });
+
+  const handleTabClick = tabId => {
+    setSelectedTab(tabId);
+  }
 
   return (
     <header
@@ -33,19 +37,29 @@ export default function Header({Props}) {
             </button>
             <ul className="nav_wrap">
               <li>
-                <Link to="/intro1">회사 소개</Link>
+                <Link to="/intro1">
+                  회사 소개
+                </Link>
                 <ul>
                   <li>
-                    <Link to="/intro1">개요 · 연혁</Link>
+                    <Link to="/intro1">
+                      개요 · 연혁
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/intro2">찾아오시는 길</Link>
+                    <Link to="/intro2">
+                      찾아오시는 길
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/intro3">조직도</Link>
+                    <Link to="/intro3">
+                      조직도
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/intro4">사업허가증</Link>
+                    <Link to="/intro4">
+                      사업허가증
+                    </Link>
                   </li>
                 </ul>
               </li>

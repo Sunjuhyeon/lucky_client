@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Intro() {
+export default function IntroTab({activeTab}) {
   // 탭메뉴
   const tabMenu = [
     {
@@ -25,31 +25,18 @@ export default function Intro() {
       link: '/intro4',
     },
   ];
-  const [activeTab, setActiveTab] = useState('intro1');
-
-  const handleTabClick = tabId => {
-    if (activeTab !== tabId) {
-      setActiveTab(tabId);
-    }
-  };
 
   return (
-    <section className="route_wrap">
-      <ul className="tab_wrap">
-        {tabMenu.map((tab, i) => {
-          return (
-            <li
-              key={`tab${i}`}
-              className={activeTab === tab.id ? 'on' : ''}
-              onClick={() => handleTabClick(tab.id)}
-            >
-              <Link to={tab.link} className="anchor">
-                {tab.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+    <ul className="tab_wrap">
+      {tabMenu.map((tab, i) => {
+        return (
+          <li key={`tab${i}`} className={activeTab === tab.id ? 'on' : ''}>
+            <Link to={tab.link} className="anchor">
+              {tab.name}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }

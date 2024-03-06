@@ -5,7 +5,7 @@ import IntroTab from './IntroTab';
 export default function Intro4() {
   return (
     <div className="inner">
-      <IntroTab />
+      <IntroTab activeTab="intro4" />
       Intro4
     </div>
   );

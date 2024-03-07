@@ -15,11 +15,13 @@ export default function Service2() {
               근무자에 반복적인 교육으로 전문적인 서비스 제공
             </p>
             <ul className="svc_list">
+              <li>미화원 파견</li>
+              <li>소독</li>
               <li>건물 및 사무실 대청소</li>
               <li>왁스 작업</li>
               <li>카페트 청소</li>
               <li>대리석 광택</li>
-              <li>외벽 청소</li>
+              <li>전문 외벽 청소</li>
             </ul>
           </div>
         </div>

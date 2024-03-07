@@ -15,10 +15,9 @@ export default function Service5() {
               입주민과 방문객의 편의와 안전을 최우선으로 생각합니다.
             </p>
             <ul className="svc_list">
-              <li>차량 통제 및 방문객 안내</li>
-              <li>주차요금 정산</li>
-              <li>주차장내 시설물 보호 및 관리</li>
-              <li>청결유지 및 사고예방</li>
+              <li>빌딩</li>
+              <li>식당</li>
+              <li>기계식 주차관리</li>
             </ul>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function Service4() {
               메뉴얼을 통해 체계적이고 효과적인 최선의 방법을 찾아 진행합니다.
             </p>
             <ul className="svc_list">
-              <li>기관실, 전기, 배관, 수선 등</li>
+              <li>관리소장 파견</li>
             </ul>
           </div>
         </div>

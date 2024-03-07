@@ -53,6 +53,11 @@ button {
   line-height: 42px;
   font-weight: 500;
 }
+.tit_wrap p.sub_tit {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+}
 .tit_wrap p em {
   color: #39A7FF;
 }
@@ -221,9 +226,13 @@ textarea::-webkit-scrollbar-track {
     font-size: 15px;
   }
   body:not(.is_pc) .tit_wrap p {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 32px;
     word-break: keep-all;
+  }
+  body:not(.is_pc) .tit_wrap p.sub_tit {
+    font-size: 18px;
+    line-height: 24px;
   }
   body:not(.is_pc) .tit_wrap p span {
     display: block;

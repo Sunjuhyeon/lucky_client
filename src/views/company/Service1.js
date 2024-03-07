@@ -15,14 +15,12 @@ export default function Service1() {
               <p className='svc_tit'>범죄예방, 재산손실 및 입주자 보호</p>
               <ul className='svc_list'>
                 <li>
-                  주민에 대한 신뢰감, 친절, 예의바른 행동, 만족스런 서비스제공
+                  경비원
                 </li>
                 <li>
-                  경비원 자질, 향상 및 실무능력 배양하여 유사시에 대처능력 및 행동
-                  요령 습득
+                  주/야, 일근 근무
                 </li>
-                <li>체계화된 매뉴얼에 따른 안전제일 서비스</li>
-                <li>각종 보험 가입 배상책임</li>
+                <li>격일제</li>
               </ul>
             </div>
           </div>

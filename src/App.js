@@ -23,7 +23,7 @@ function App() {
     <>
       <ScrollTop />
       <Header Props={headerClass} />
-      <Side />
+      {/* <Side /> */}
       <Outlet />
       <Footer/>
     </>

@@ -61,7 +61,7 @@ export default function Send() {
   
   return (
     <div className="w_set">
-      <div className="inner">
+      <div className="send_inner">
         <div className="send_wrap">
           <div className="txt_wrap">
             <p>

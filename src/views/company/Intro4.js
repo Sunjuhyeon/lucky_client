@@ -6,7 +6,9 @@ export default function Intro4() {
   return (
     <div className="inner">
       <IntroTab activeTab="intro4" />
-      Intro4
+      <div className="intro_wrap">
+        
+      </div>
     </div>
   );
 }

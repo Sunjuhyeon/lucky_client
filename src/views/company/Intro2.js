@@ -32,9 +32,9 @@ export default function Intro2() {
    useEffect(() => {
      if (!map || !marker) return;
 
-     const iwContent = `<div style="padding:5px; width:170px;">
+     const iwContent = `<div style="padding:5px; width:190px; border-color:#d3d3d3;">
        <p style="font-size:17px;">럭키시스템</p>
-       <p style="font-size:17px; margin-top:5px;">크레신타워 11층 16호</p>
+       <p style="font-size:17px; margin-top:5px;">크레신타워 11층 1116호</p>
        <a href="https://place.map.kakao.com/744827414" style="color:blue" target="_blank">큰지도보기</a></div>`;
      const iwPosition = new kakao.maps.LatLng(37.537059, 127.084358);
      const infowindow = new kakao.maps.InfoWindow({
@@ -70,8 +70,8 @@ export default function Intro2() {
   return (
     <div className="inner">
       <IntroTab activeTab="intro2" />
-      <div className='intro_wrap'>
-        <p className='txt_wrap'>서울 광진구 아차산로 375</p>
+      <div className="intro_wrap">
+        <p className="txt_wrap">서울 광진구 아차산로 375 (크레신타워 1116호)</p>
         <div className="map_wrap">
           <div
             id="map"
@@ -94,7 +94,9 @@ export default function Intro2() {
               />
             </span>
           </div>
-          <button onClick={setBounds} className='reset_btn'>지도 중심으로 이동</button>
+          <button onClick={setBounds} className="reset_btn">
+            지도 중심으로 이동
+          </button>
         </div>
       </div>
     </div>

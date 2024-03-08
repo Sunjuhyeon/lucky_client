@@ -83,7 +83,11 @@ export default function Header({ Props }) {
                 {navItems.map((item, index) => {
                   return (
                     <li key={index}>
-                      <Link to={item.to}>{item.label}</Link>
+                      <Link to={item.to} 
+                      onClick={() => {
+                        setMoBtn(false);
+                      }}
+                      >{item.label}</Link>
                       <button
                         type="button"
                         onClick={() => toggleTowNav(index)}
@@ -95,7 +99,12 @@ export default function Header({ Props }) {
                         {item.subItems.map((subItems, subIndex) => {
                           return (
                             <li key={subIndex}>
-                              <Link to={subItems.to}>{subItems.label}</Link>
+                              <Link 
+                              to={subItems.to} 
+                              onClick={() => 
+                                {setMoBtn(false); setActiveNav(null);
+                              }}
+                              >{subItems.label}</Link>
                             </li>
                           );
                         })}

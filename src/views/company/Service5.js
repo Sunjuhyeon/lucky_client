@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default function Service5() {
+  const imgList = [
+    {
+      src: 'service5.jpg',
+    },
+  ];
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <div className="service_wrap">
       <div className="tit_wrap">
@@ -9,7 +21,49 @@ export default function Service5() {
       </div>
       <div className="content_wrap">
         <div className="w_set">
-          <div className="img_wrap service5"></div>
+          <div className="img_wrap service5">
+            <Swiper
+              style={{
+                '--swiper-navigation-color': '#fff',
+                '--swiper-pagination-color': '#fff',
+              }}
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{
+                swiper:
+                  thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+            >
+              {imgList.map((img, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+            >
+              {imgList.map((img, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
           <div className="txt_wrap">
             <p className="svc_tit">
               입주민과 방문객의 편의와 안전을 최우선으로 생각합니다.
@@ -25,4 +79,3 @@ export default function Service5() {
     </div>
   );
 }
-

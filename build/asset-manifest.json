@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.7098c889.css",
-    "main.js": "./static/js/main.6e55ddfd.js",
+    "main.css": "./static/css/main.8d79b132.css",
+    "main.js": "./static/js/main.c00aca45.js",
     "static/media/point1.jpeg": "./static/media/point1.17ddd4d0c9dee97772b4.jpeg",
     "static/media/service3-3.jpeg": "./static/media/service3-3.efe9c03b742d4f4f73e0.jpeg",
     "static/media/main_banner.jpg": "./static/media/main_banner.24fa3bdc3a34533bd74f.jpg",
@@ -41,19 +41,19 @@
     "static/media/partner2.svg": "./static/media/partner2.14f7239f27b83d732db6.svg",
     "static/media/call.svg": "./static/media/call.a6196c75e0f370715670.svg",
     "static/media/partner5.svg": "./static/media/partner5.8e1eefdfd0c818dd9743.svg",
-    "static/media/sub2.svg": "./static/media/sub2.b873105aff443f6bae11.svg",
     "index.html": "./index.html",
+    "static/media/sub2.svg": "./static/media/sub2.b873105aff443f6bae11.svg",
     "static/media/sub1.svg": "./static/media/sub1.07a63ad5acd1fe942d3a.svg",
     "static/media/checkbox_on.svg": "./static/media/checkbox_on.784b1c850c34317823df.svg",
     "static/media/file_ico.svg": "./static/media/file_ico.1ba1d07f6bc8b137f9ae.svg",
     "static/media/plus_ico.svg": "./static/media/plus_ico.5c4e4afd45af303e272d.svg",
     "static/media/arrow_up.svg": "./static/media/arrow_up.e2f2f853293381bccfe7.svg",
     "static/media/arrow_down.svg": "./static/media/arrow_down.7f1bfe217b759c9692c0.svg",
-    "main.7098c889.css.map": "./static/css/main.7098c889.css.map",
-    "main.6e55ddfd.js.map": "./static/js/main.6e55ddfd.js.map"
+    "main.8d79b132.css.map": "./static/css/main.8d79b132.css.map",
+    "main.c00aca45.js.map": "./static/js/main.c00aca45.js.map"
   },
   "entrypoints": [
-    "static/css/main.7098c889.css",
-    "static/js/main.6e55ddfd.js"
+    "static/css/main.8d79b132.css",
+    "static/js/main.c00aca45.js"
   ]
 }

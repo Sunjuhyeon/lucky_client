@@ -46,7 +46,10 @@ export default function Service3() {
               {imgList.map((img, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                    <img
+                      src={require(`../../assets/images/img/${img.src}`)}
+                      alt="공사현장경비 이미지"
+                    />
                   </SwiperSlide>
                 );
               })}
@@ -64,7 +67,10 @@ export default function Service3() {
               {imgList.map((img, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                    <img
+                      src={require(`../../assets/images/img/${img.src}`)}
+                      alt="공사현장경비 이미지"
+                    />
                   </SwiperSlide>
                 );
               })}

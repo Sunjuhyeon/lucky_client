@@ -40,7 +40,10 @@ export default function Service4() {
               {imgList.map((img, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                    <img
+                      src={require(`../../assets/images/img/${img.src}`)}
+                      alt="시설관리 이미지"
+                    />
                   </SwiperSlide>
                 );
               })}
@@ -58,7 +61,11 @@ export default function Service4() {
               {imgList.map((img, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img src={require(`../../assets/images/img/${img.src}`)} />
+                    alt="시설관리 이미지" alt="시설관리 이미지"
+                    <img
+                      src={require(`../../assets/images/img/${img.src}`)}
+                      alt="시설관리 이미지"
+                    />
                   </SwiperSlide>
                 );
               })}

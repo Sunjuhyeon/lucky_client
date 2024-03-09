@@ -10,6 +10,14 @@ export default function Send() {
   const [number, setNumber] = useState('');
   const [checkedList, setCheckedList] = useState([]);
 
+  //체크박스 초기화(폼 전송 시)
+  const resetCheckboxes = () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"');
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+  };
+
   const emailHandler = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
@@ -39,24 +47,41 @@ export default function Send() {
   );
 
   const submitHandler = useCallback(
-    (e) => {
+    e => {
       e.preventDefault();
-      if (number && email && title && message && checkedList) {
+      if (number && email && title) {
         console.log(number, email, title, message, checkedList);
         const payload = {
           number: number,
           email: email,
           title: title,
           message: message,
-          checkedList: checkedList
+          checkedList: checkedList,
         };
         axios
-          .post('http://localhost:8001/server/mail', payload)
-          .then(res => console.log(res))
-          .catch(err => console.error(err));
+          .post('http://www.lu.co.kr/server/mail', payload)
+          .then(res => {
+            console.log(res);
+
+            alert('견적이 성공적으로 발송되었습니다. 빠른 연락 드리겠습니다^^');
+
+            setEmail('');
+            setSubject('');
+            setMessage('');
+            setNumber('');
+            setCheckedList([]);
+            resetCheckboxes();
+          })
+          .catch(err => {
+            console.error(err);
+
+            alert(
+              '죄송합니다. 일시적인 에러로 인해 메일 전송에 실패하였습니다. 전화주시면 빠른 상담 가능합니다^^'
+            );
+          });
       }
     },
-    [number, email, title, message]
+    [number, email, title, message, checkedList]
   );
   
   return (
@@ -84,6 +109,7 @@ export default function Send() {
                       id="send_name"
                       placeholder="담당자명 입력"
                       required
+                      value={title}
                       onChange={subjectHandler}
                     />
                     <label htmlFor="send_name">담당자명</label>
@@ -97,6 +123,7 @@ export default function Send() {
                       id="send_num"
                       placeholder="'-'제외 숫자만 입력"
                       required
+                      value={number}
                       onChange={numberHandler}
                     />
                     <label htmlFor="send_num">연락처</label>
@@ -110,6 +137,7 @@ export default function Send() {
                       id="send_email"
                       placeholder="이메일주소 입력"
                       required
+                      value={email}
                       onChange={emailHandler}
                     />
                     <label htmlFor="send_email">이메일</label>
@@ -147,6 +175,7 @@ export default function Send() {
                     <textarea
                       id="send_txt"
                       required
+                      value={message}
                       onChange={messageHandler}
                     ></textarea>
                     <label htmlFor="send_txt">문의내용</label>

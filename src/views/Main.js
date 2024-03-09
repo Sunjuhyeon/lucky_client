@@ -6,7 +6,6 @@ import Service from './sub/Service';
 
 const MainSection = styled.div`
   padding: 0 0 20px;
-  background-color: rgba(241, 244, 246, 0.2117647059);
 `;
 
 export default function Main() {
@@ -21,9 +20,9 @@ export default function Main() {
         <section id="banner_wrap">
           <div className="txt_wrap">
             <h3>
-              30년 경력의 노하우를 담아
+              럭키시스템(주)는 믿음으로 노력하는
               <br />
-              최적의 건물관리 서비스를 제공합니다.
+              건물관리 경비,청소,소독 전문업체입니다.
             </h3>
           </div>
           <div className="contact_wrap">
@@ -46,7 +45,7 @@ export default function Main() {
           <div className="tit_wrap">
             <span className="nunito">SERVICE CATEGORY</span>
             <p>
-              <span>공간에 필요한</span>
+              <span>건물관리에 필요한</span>
               <span>모든 서비스를 한번에!</span>
             </p>
           </div>
@@ -112,7 +111,7 @@ export default function Main() {
                 <div className="img_wrap">
                   <img
                     src={require('../assets/images/img/point1.jpeg')}
-                    alt="특장점 이미지"
+                    alt="럭키시스템 장점"
                   />
                 </div>
                 <div className="txt_wrap">
@@ -135,7 +134,7 @@ export default function Main() {
                 <div className="img_wrap">
                   <img
                     src={require('../assets/images/img/point2.jpeg')}
-                    alt="특장점 이미지"
+                    alt="럭키시스템 장점"
                   />
                 </div>
                 <div className="txt_wrap">

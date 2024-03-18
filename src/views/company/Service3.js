@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default function Service3() {
   const imgList = [
@@ -40,7 +40,11 @@ export default function Service3() {
                 swiper:
                   thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
               }}
-              modules={[FreeMode, Navigation, Thumbs]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, FreeMode, Navigation, Thumbs]}
               className="mySwiper2"
             >
               {imgList.map((img, i) => {

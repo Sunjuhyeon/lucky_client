@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 import Partner from './sub/Partner';
+import Gallery from './sub/Gallery';
 import Service from './sub/Service';
 
 const MainSection = styled.div`
@@ -10,9 +11,6 @@ const MainSection = styled.div`
 
 export default function Main() {
   const [showService, setShowService] = useState(false);
-  const toggleService  = () => {
-    setShowService(!showService);
-  }
 
   return (
     <>
@@ -41,6 +39,9 @@ export default function Main() {
             <Partner />
           </div>
         </section>
+        {/* <section>
+          <Gallery/>
+        </section> */}
         <section id="service_wrap">
           <div className="tit_wrap">
             <span className="nunito">SERVICE CATEGORY</span>
@@ -52,33 +53,43 @@ export default function Main() {
           <div className="content_wrap">
             <ul className="service_list">
               <li>
-                <div className="ico_wrap list1">
-                  <i></i>
-                </div>
+                <Link to="/service1">
+                  <div className="ico_wrap list1">
+                    <i></i>
+                  </div>
+                </Link>
                 <strong>빌딩경비</strong>
               </li>
               <li>
-                <div className="ico_wrap list2">
-                  <i></i>
-                </div>
+                <Link to="/service2">
+                  <div className="ico_wrap list2">
+                    <i></i>
+                  </div>
+                </Link>
                 <strong>빌딩청소</strong>
               </li>
               <li>
-                <div className="ico_wrap list3">
-                  <i></i>
-                </div>
+                <Link to="/service4">
+                  <div className="ico_wrap list3">
+                    <i></i>
+                  </div>
+                </Link>
+                <strong>외벽청소</strong>
+              </li>
+              <li>
+                <Link to="/service3">
+                  <div className="ico_wrap list4">
+                    <i></i>
+                  </div>
+                </Link>
                 <strong>공사현장경비</strong>
               </li>
               <li>
-                <div className="ico_wrap list4">
-                  <i></i>
-                </div>
-                <strong>시설관리</strong>
-              </li>
-              <li>
-                <div className="ico_wrap list5">
-                  <i></i>
-                </div>
+                <Link to="/service5">
+                  <div className="ico_wrap list5">
+                    <i></i>
+                  </div>
+                </Link>
                 <strong>주차관리</strong>
               </li>
             </ul>

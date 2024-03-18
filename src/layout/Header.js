@@ -19,8 +19,8 @@ export default function Header({ Props }) {
       subItems: [
         { label: '빌딩경비', to: '/service1' },
         { label: '빌딩청소', to: '/service2' },
+        { label: '외벽청소', to: '/service4' },
         { label: '공사현장경비', to: '/service3' },
-        { label: '시설관리', to: '/service4' },
         { label: '주차관리', to: '/service5' },
       ],
     },

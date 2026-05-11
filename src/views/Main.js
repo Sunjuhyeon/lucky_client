@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 import Partner from './sub/Partner';
-import Gallery from './sub/Gallery';
-import Service from './sub/Service';
+// import Gallery from './sub/Gallery';
+// import Service from './sub/Service';
 
 const MainSection = styled.div`
   padding: 0 0 20px;

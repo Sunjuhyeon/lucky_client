@@ -37,20 +37,12 @@ export default function Footer() {
           {navItems.map((item, index) => {
             return (
               <li key={index}>
-                <Link
-                  to={item.to}
-                >
-                  {item.label}
-                </Link>
+                <Link to={item.to}>{item.label}</Link>
                 <ul>
                   {item.subItems.map((subItems, subIndex) => {
                     return (
                       <li key={subIndex}>
-                        <Link
-                          to={subItems.to}
-                        >
-                          {subItems.label}
-                        </Link>
+                        <Link to={subItems.to}>{subItems.label}</Link>
                       </li>
                     );
                   })}
@@ -81,7 +73,7 @@ export default function Footer() {
             <span>Copyright ⓒ 2024 럭키시스템(주) All Rights Reserved.</span>
           </div>
           <div className="sec_r">
-            <a href="#">네이버 블로그</a>
+            <a href="https://blog.naver.com/lu3488" target='_blank'>네이버 블로그</a>
           </div>
         </div>
       </div>

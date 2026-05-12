@@ -121,7 +121,7 @@ export default function Main() {
               <li>
                 <div className="img_wrap">
                   <img
-                    src={require('../assets/images/img/point1.jpeg')}
+                    src={require('../assets/images/img/point1.png')}
                     alt="럭키시스템 장점"
                   />
                 </div>
@@ -144,7 +144,7 @@ export default function Main() {
               <li>
                 <div className="img_wrap">
                   <img
-                    src={require('../assets/images/img/point2.jpeg')}
+                    src={require('../assets/images/img/point2.png')}
                     alt="럭키시스템 장점"
                   />
                 </div>

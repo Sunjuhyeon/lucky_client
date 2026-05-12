@@ -677,7 +677,6 @@
 #about_wrap .list_wrap li .img_wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 #about_wrap .list_wrap li .txt_wrap span.nunito {
   font-size: 18px;

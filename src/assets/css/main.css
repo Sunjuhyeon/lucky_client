@@ -352,48 +352,25 @@
 
 #banner_wrap {
   position: relative;
-  background: url(../images/img/main_banner.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/img/main_banner.jpg) no-repeat;
   background-position: bottom -90px center;
   background-size: cover;
   height: 70vh;
-}
-#banner_wrap:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-#banner_wrap::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
-  height: 90%;
-  width: 100%;
-}
-#banner_wrap .txt_wrap {
-  position: absolute;
-  z-index: 10;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  padding: 50px 70px;
 }
 #banner_wrap .txt_wrap h3 {
-  font-size: 35px;
-  line-height: 52px;
+  font-size: 55px;
+  line-height: 75px;
   font-weight: 500;
+  color: #fff;
 }
 #banner_wrap .txt_wrap .btn {
   display: inline-block;
   margin-top: 30px;
+  background-color: #fff;
 }
 #banner_wrap .contact_wrap {
   position: absolute;
@@ -1456,18 +1433,12 @@
   }
   body:not(.is_pc) #banner_wrap {
     background-position: bottom -70px center;
-  }
-  body:not(.is_pc) #banner_wrap .txt_wrap {
-    padding: 0 16px;
+    padding: 50px;
   }
   body:not(.is_pc) #banner_wrap .txt_wrap h3 {
     word-break: keep-all;
-    font-size: 24px;
-    line-height: 36px;
-  }
-  body:not(.is_pc) #banner_wrap .txt_wrap .btn {
-    width: 200px;
-    padding: 0.9rem 0.75rem;
+    font-size: 32px;
+    line-height: 48px;
   }
   body:not(.is_pc) #banner_wrap .contact_wrap {
     gap: 8px 20px;

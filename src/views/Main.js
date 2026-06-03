@@ -18,14 +18,13 @@ export default function Main() {
         <section id="banner_wrap">
           <div className="txt_wrap">
             <h3>
-              럭키시스템(주)는 믿음으로 노력하는
+              건물관리가 어렵다면,
               <br />
-              건물관리 경비,청소,소독 전문업체입니다.
+              럭키와 상담하세요!
             </h3>
-          </div>
-          <div className="contact_wrap">
-            <p className="info">전화 주시면 빠른상담 가능합니다.</p>
-            <p className="num">02)461-2203</p>
+            <a href="tel:02-461-2203" className="btn">
+              전화상담 바로가기
+            </a>
           </div>
         </section>
         <section id="partner_wrap">

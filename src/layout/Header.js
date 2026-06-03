@@ -113,8 +113,8 @@ export default function Header({ Props }) {
                   );
                 })}
               </ul>
-              <a href="tel:024612203" className="btn color_1">
-                전화상담 연결
+              <a target='_blank' href="https://m.blog.naver.com/lu3488" className="btn color_1">
+                공식블로그 바로가기
               </a>
             </nav>
           </div>

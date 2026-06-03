@@ -1361,6 +1361,7 @@
   body:not(.is_pc) .hd_wrap nav .btn {
     font-size: 14px;
     padding: 0.5rem 0.75rem;
+    word-break: keep-all;
   }
   body:not(.is_pc) .ft_wrap {
     padding: 20px 16px 30px;
@@ -1433,7 +1434,7 @@
   }
   body:not(.is_pc) #banner_wrap {
     background-position: bottom -70px center;
-    padding: 50px;
+    padding: 50px 30px;
   }
   body:not(.is_pc) #banner_wrap .txt_wrap h3 {
     word-break: keep-all;
@@ -1655,8 +1656,12 @@
     margin-left: 0 !important;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .hd_wrap .logo img {
     height: 25px !important;
+  }
+  .hd_wrap .btn {
+    width: min-content;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

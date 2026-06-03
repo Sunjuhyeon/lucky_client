@@ -1288,6 +1288,7 @@
       .btn{
         font-size: 14px;
         padding: 0.5rem 0.75rem;
+        word-break: keep-all;
       }
     }
   }
@@ -1367,7 +1368,7 @@
   }
   #banner_wrap{
     background-position: bottom -70px center;
-    padding: 50px;
+    padding: 50px 30px;
     .txt_wrap{
       h3{
         word-break: keep-all;
@@ -1644,12 +1645,16 @@
     }
   }
 }
-@media(max-width:450px){
+@media(max-width:400px){
   .hd_wrap{
     .logo{
       img{
         height: 25px !important;
       }
+    }
+    .btn{
+      width: min-content;
+      text-align: center;
     }
   }
 }

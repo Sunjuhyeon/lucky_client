@@ -687,16 +687,20 @@
 #about_us{
    display: flex;
    justify-content: space-between;
-   align-items: end;
+   align-items: start;
+   gap: 10px;
    padding: 50px 30px 30px;
    .txtbox{
     word-break: keep-all;
     .main{
-      font-size: 40px;
+      font-size: 35px;
+      font-weight: 700;
     }
     .sub{
       margin-top: 20px;
-      font-size: 20px;
+      font-size: 23px;
+      line-height: 38px;
+      color: #444;
     }
    }
 }
@@ -1404,6 +1408,15 @@
       }
     }
   }
+  #about_us{
+    display: block;
+    .imgbox{
+      img{
+        margin: 30px auto 0;
+        display: block;
+      }
+    }
+  }
   #service_wrap{
     margin-top: 60px;
     padding:  0 16px;
@@ -1639,6 +1652,22 @@
 @media(max-width:550px){
   .mo_br{
     display: block;
+  }
+  #about_us{
+    .txtbox{
+      .main{
+        font-size: 22px;
+      }
+      .sub{
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+    .imgbox{
+      img{
+        width: 100%;
+      }
+    }
   }
   #about_wrap{
     .list_wrap{

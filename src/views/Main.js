@@ -27,23 +27,20 @@ export default function Main() {
             </a>
           </div>
         </section>
-        <section id='about_us'>
+        <section id="about_us">
           <div className="txtbox">
             <p className="main">
-              우리는 전통 재료와 기술을 사용하여 역사 보존에 중점을 둔 지역
-              기업입니다.
+              30년 경력의
+              <br></br>
+              건물종합관리 인력파견기업
             </p>
             <p className="sub">
-              여기에 회사에 관해 소개하는 단락을 작성하세요. 기업의 배경, 역사,
-              임무, 비전 혹은 철학을 이야기할 수 있습니다. 브랜드의 모습을
-              고객에게 소개할 수 있는 어떤 것이든 괜찮습니다. 이렇게 하면 고객과
-              회사 사이에 유대감을 형성하는 데 도움이 되며, 업무 관계로 이어질
-              수도 있습니다.
+              럭키시스템㈜은 1996년 설립된, 건물경비·건물청소·외벽청소·시설관리·주차관리 등 건물 운영에 필요한 전문 인력을 파견하고 있는 회사입니다.
             </p>
           </div>
           <div className="imgbox">
             <img
-              src={require('../assets/images/img/point1.png')}
+              src={require('../assets/images/img/about_us.png')}
               alt="럭키시스템 장점"
             />
           </div>

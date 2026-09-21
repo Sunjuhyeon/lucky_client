@@ -684,6 +684,22 @@
     }
   }
 }
+#about_us{
+   display: flex;
+   justify-content: space-between;
+   align-items: end;
+   padding: 50px 30px 30px;
+   .txtbox{
+    word-break: keep-all;
+    .main{
+      font-size: 40px;
+    }
+    .sub{
+      margin-top: 20px;
+      font-size: 20px;
+    }
+   }
+}
 #partner_wrap{
   margin-top: 60px;
   .slide_banner{

@@ -27,6 +27,27 @@ export default function Main() {
             </a>
           </div>
         </section>
+        <section id='about_us'>
+          <div className="txtbox">
+            <p className="main">
+              우리는 전통 재료와 기술을 사용하여 역사 보존에 중점을 둔 지역
+              기업입니다.
+            </p>
+            <p className="sub">
+              여기에 회사에 관해 소개하는 단락을 작성하세요. 기업의 배경, 역사,
+              임무, 비전 혹은 철학을 이야기할 수 있습니다. 브랜드의 모습을
+              고객에게 소개할 수 있는 어떤 것이든 괜찮습니다. 이렇게 하면 고객과
+              회사 사이에 유대감을 형성하는 데 도움이 되며, 업무 관계로 이어질
+              수도 있습니다.
+            </p>
+          </div>
+          <div className="imgbox">
+            <img
+              src={require('../assets/images/img/point1.png')}
+              alt="럭키시스템 장점"
+            />
+          </div>
+        </section>
         <section id="partner_wrap">
           <div className="tit_wrap">
             <p className="sub_tit">

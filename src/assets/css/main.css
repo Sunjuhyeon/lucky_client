@@ -768,6 +768,23 @@
   color: #63666F;
 }
 
+#about_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 50px 30px 30px;
+}
+#about_us .txtbox {
+  word-break: keep-all;
+}
+#about_us .txtbox .main {
+  font-size: 40px;
+}
+#about_us .txtbox .sub {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
 #partner_wrap {
   margin-top: 60px;
 }
